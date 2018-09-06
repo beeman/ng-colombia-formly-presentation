@@ -1,8 +1,6 @@
 export class MyFormComponent {
   public form = new FormGroup({});
 
-  public model = {};
-
   public fields: FormlyFieldConfig[] = [{
     type: 'input',
     key: 'name',
@@ -12,6 +10,8 @@ export class MyFormComponent {
       required: true
     }
   }];
+
+  public model = {};
 
   submit() {
     console.log(this.form.value);
