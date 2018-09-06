@@ -1,0 +1,17 @@
+<form [formGroup]="form"
+      (ngSubmit)="submit()">
+
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text"
+               class="form-control"
+               formControlName="name"
+               placeholder="Your name" />
+    </div>
+
+    <button type="submit"
+            class="btn btn-success"
+            [disabled]="!form.valid">
+        Submit
+    </button>
+</form>

@@ -1,0 +1,26 @@
+<form [formGroup]="form"
+      (ngSubmit)="submit()">
+
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text"
+               class="form-control"
+               formControlName="name"
+               placeholder="Enter your name"
+               [ngClass]="{ 'is-invalid': form.controls['name'].touched && form.controls['name'].errors }"/>
+
+        <div class="invalid-feedback"
+             *ngIf="form.controls['name'].touched && form.controls['name'].errors">
+            <div *ngIf="form.controls['name'].touched && form.controls['name'].errors.required">
+                This field is required
+            </div>
+        </div>
+
+    </div>
+
+    <button class="btn btn-success"
+            type="submit"
+            [disabled]="!form.valid">
+        Submit
+    </button>
+</form>

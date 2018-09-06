@@ -1,0 +1,11 @@
+<form [formGroup]="form"
+      (ngSubmit)="submit()">
+
+    <!-- FIELDS GO HERE -->
+
+    <button class="btn btn-success"
+            type="submit"
+            [disabled]="!form.valid">
+        Submit
+    </button>
+</form>
