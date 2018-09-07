@@ -91,7 +91,7 @@ const blitz = {
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
+      <Deck transition={["fade"]} transitionDuration={500} theme={theme}>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="secondary">
           <Text size={1} fit caps lineHeight={1} textColor="tertiary">
@@ -106,7 +106,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
 
-        <Slide transition={["zoom"]} bgColor="primary">
+        <Slide transition={["fade"]} bgColor="primary">
           <Text size={1} fit lineHeight={1} textColor="secondary">
             beeman 🐝
           </Text>
@@ -154,7 +154,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
 
-        <Slide transition={["zoom"]} bgColor="primary">
+        <Slide transition={["fade"]} bgColor="primary">
           <Text size={1} fit caps lineHeight={1} textColor="secondary">
             Follow me!
           </Text>
@@ -224,7 +224,7 @@ export default class Presentation extends React.Component {
         <CodeSlide
           bgColor="primary"
           textColor="secondary"
-          transition={[]}
+          transition={["fade"]}
           lang="html"
           code={require("raw-loader!../assets/code/form-empty.html")}
           ranges={[
@@ -238,7 +238,7 @@ export default class Presentation extends React.Component {
         <CodeSlide
           bgColor="primary"
           textColor="secondary"
-          transition={[]}
+          transition={["fade"]}
           lang="ts"
           code={require("raw-loader!../assets/code/form-empty.ts")}
           ranges={[
@@ -251,7 +251,7 @@ export default class Presentation extends React.Component {
         <CodeSlide
           bgColor="primary"
           textColor="secondary"
-          transition={[]}
+          transition={["fade"]}
           lang="html"
           code={require("raw-loader!../assets/code/form-reactive-basic.html")}
           ranges={[
@@ -271,7 +271,7 @@ export default class Presentation extends React.Component {
         <CodeSlide
           bgColor="primary"
           textColor="secondary"
-          transition={[]}
+          transition={["fade"]}
           lang="ts"
           code={require("raw-loader!../assets/code/form-reactive-basic.ts")}
           ranges={[
@@ -286,7 +286,7 @@ export default class Presentation extends React.Component {
         <CodeSlide
           bgColor="primary"
           textColor="secondary"
-          transition={[]}
+          transition={["fade"]}
           lang="html"
           code={require("raw-loader!../assets/code/form-reactive-advanced.html")}
           ranges={[
@@ -320,9 +320,15 @@ export default class Presentation extends React.Component {
 
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={4} caps textColor="secondary">
+          <Heading size={4} caps fit textColor="secondary">
             There must be a fix!
           </Heading>
+          <Text size={6} caps fit textColor="tertiary">
+            Don't define <b>how</b>
+          </Text>
+          <Text size={6} caps fit textColor="tertiary">
+            Define <b>what</b>!
+          </Text>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
@@ -334,7 +340,7 @@ export default class Presentation extends React.Component {
         <CodeSlide
           bgColor="primary"
           textColor="secondary"
-          transition={[]}
+          transition={["fade"]}
           lang="ts"
           code={require("raw-loader!../assets/code/formly-field.ts")}
           ranges={[
@@ -352,7 +358,7 @@ export default class Presentation extends React.Component {
         <CodeSlide
           bgColor="primary"
           textColor="secondary"
-          transition={[]}
+          transition={["fade"]}
           lang="html"
           code={require("raw-loader!../assets/code/formly-template.html")}
           ranges={[
